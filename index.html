@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -16,10 +17,10 @@
         <div class="logo">mw3s</div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home" class="active" data-section="home">Home</a></li>
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#skills" data-section="skills">Skills</a></li>
+                <li><a href="#contact" data-section="contact">Contact</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
@@ -29,29 +30,353 @@
         </div>
     </header>
 
-    <main class="home-page">
-        <div class="container">
-            <div class="profile-container">
-                <div class="profile-circle">
-                    <img src="/placeholder.svg?height=500&width=500" alt="mw3s" id="profile-image">
-                </div>
-                <div class="profile-text">
-                    <h1 class="reveal-text">mw3s</h1>
-                    <p class="reveal-text delay-1">Cybersecurity Specialist & Developer</p>
-                    <div class="cta-buttons">
-                        <a href="about.html" class="btn primary-btn reveal-text delay-2">About Me</a>
-                        <a href="contact.html" class="btn secondary-btn reveal-text delay-3">Get In Touch</a>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-circle">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMAGE%202025-04-08%2022%3A44%3A34.jpg-x7IPV3oBVxUTostG43OGDCtAVYtoBh.jpeg" alt="mw3s" id="profile-image">
+                    </div>
+                    <div class="profile-text">
+                        <h1 class="reveal-text">mw3s</h1>
+                        <p class="reveal-text delay-1">Cybersecurity Specialist & Developer</p>
+                        <div class="cta-buttons">
+                            <a href="#about" class="btn primary-btn reveal-text delay-2">About Me</a>
+                            <a href="#contact" class="btn secondary-btn reveal-text delay-3">Get In Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h1 class="page-title reveal-text">About Me</h1>
+                
+                <div class="about-content">
+                    <div class="about-image fade-in">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMAGE%202025-04-08%2022%3A44%3A34.jpg-x7IPV3oBVxUTostG43OGDCtAVYtoBh.jpeg" alt="mw3s working">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="reveal-text">Professional Journey</h2>
+                        <p class="reveal-text delay-1">
+                            Known professionally as mw3s, I am a dedicated cybersecurity specialist and developer with extensive experience in exploit development and penetration testing. My journey in technology began with a fascination for understanding systems at their core, which evolved into a passion for securing digital infrastructures.
+                        </p>
+                        <p class="reveal-text delay-2">
+                            With years of hands-on experience in the field, I've developed a comprehensive understanding of both offensive and defensive security practices. My approach combines technical expertise with strategic thinking, allowing me to identify vulnerabilities that others might miss.
+                        </p>
+                        <p class="reveal-text delay-3">
+                            I believe in continuous learning and staying ahead of emerging threats in the ever-evolving cybersecurity landscape. This commitment to growth has enabled me to develop innovative solutions for complex security challenges.
+                        </p>
+                        <p class="reveal-text delay-4">
+                            My work is driven by a dedication to excellence and a genuine passion for technology. I approach each project with meticulous attention to detail and a focus on delivering results that exceed expectations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <h2 class="section-title reveal-text">Experience Timeline</h2>
+                    <div class="timeline-container">
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Senior Cybersecurity Specialist</h3>
+                                <p class="timeline-date">2022 - Present</p>
+                                <p>Leading penetration testing initiatives and developing custom security solutions for enterprise clients.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in delay-1">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Security Researcher</h3>
+                                <p class="timeline-date">2019 - 2022</p>
+                                <p>Conducted vulnerability research and developed exploit proof-of-concepts for various platforms.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in delay-2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Full-Stack Developer</h3>
+                                <p class="timeline-date">2017 - 2019</p>
+                                <p>Developed secure web applications with a focus on implementing robust security measures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h1 class="page-title reveal-text">Technical Skills</h1>
+                
+                <div class="skills-container">
+                    <div class="skills-category fade-in">
+                        <h2>Frontend Development</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>HTML</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="CSS">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>CSS</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>JavaScript</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="TypeScript">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>TypeScript</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="JSX">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>JSX/TSX</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category fade-in delay-1">
+                        <h2>Backend Development</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Python">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Python</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="PHP">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-php"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>PHP</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Ruby">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-gem"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Ruby</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="SQL">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>SQL</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category fade-in delay-2">
+                        <h2>Mobile Development</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Kotlin">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-android"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Kotlin</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 82%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Swift">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-apple"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Swift</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Objective-C">
+                                <div class="skill-icon">
+                                    <i class="fa-brands fa-apple"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Objective-C</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category fade-in delay-3">
+                        <h2>Cybersecurity</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Penetration Testing">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Penetration Testing</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Exploit Development">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-bug"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Exploit Development</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Vulnerability Research">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h3>Vulnerability Research</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h1 class="page-title reveal-text">Connect With Me</h1>
+                
+                <div class="social-container">
+                    <div class="social-card fade-in">
+                        <div class="social-icon instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <h2>Instagram</h2>
+                        <p>@mw3s</p>
+                        <a href="https://instagram.com/mw3s" target="_blank" class="social-button">
+                            <span>Follow</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="social-card fade-in delay-1">
+                        <div class="social-icon email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h2>Email</h2>
+                        <p>mw3s@hi2.in</p>
+                        <a href="mailto:mw3s@hi2.in" class="social-button">
+                            <span>Send Email</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="social-card fade-in delay-2">
+                        <div class="social-icon github">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h2>GitHub</h2>
+                        <p>@mw3s</p>
+                        <a href="https://github.com/mw3s" target="_blank" class="social-button">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container fade-in delay-3">
+                    <h2 class="section-title">Send Me a Message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 mw3s. All rights reserved.</p>
     </footer>
-
-    <div class="page-transition"></div>
     
     <script src="scripts/particles.js"></script>
     <script src="scripts/main.js"></script>
