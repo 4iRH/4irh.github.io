@@ -211,6 +211,7 @@
   transform: translateX(5px);
 }
 
+
 /* Page transition animations */
 .page-transition.entering {
   animation: pageTransitionIn 0.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
