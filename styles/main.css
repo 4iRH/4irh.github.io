@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Ensures the section starts below the fixed header */
 }
 
 body {
@@ -151,10 +152,15 @@ nav ul li a.active::after {
 
 /* Main Content */
 main {
-  padding: 120px 0 80px;
-  min-height: 100vh;
   position: relative;
   z-index: 2;
+}
+
+section {
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
 }
 
 .page-title {
@@ -171,8 +177,8 @@ main {
   text-align: center;
 }
 
-/* Home Page */
-.home-page {
+/* Home Section */
+.home-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,7 +261,11 @@ main {
   color: var(--color-background);
 }
 
-/* About Page */
+/* About Section */
+.about-section {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -348,7 +358,11 @@ main {
   margin-bottom: 10px;
 }
 
-/* Skills Page */
+/* Skills Section */
+.skills-section {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -391,6 +405,7 @@ main {
   justify-content: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  font-size: 20px;
 }
 
 .skill-info {
@@ -416,7 +431,11 @@ main {
   border-radius: 3px;
 }
 
-/* Contact Page */
+/* Contact Section */
+.contact-section {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .social-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -445,6 +464,7 @@ main {
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
+  font-size: 24px;
 }
 
 .instagram {
@@ -483,6 +503,14 @@ main {
 .social-button:hover {
   background-color: var(--color-accent);
   color: var(--color-background);
+}
+
+.social-button i {
+  transition: transform 0.3s ease;
+}
+
+.social-button:hover i {
+  transform: translateX(5px);
 }
 
 .contact-form-container {
@@ -533,19 +561,6 @@ footer {
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 10;
-}
-
-/* Page Transition */
-.page-transition {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  z-index: 9999;
-  transform: translateY(100%);
-  pointer-events: none;
 }
 
 /* Responsive Styles */
